@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>Kalkulator Body Mass Index (BMI)</h2>
+        <p class="subtitle">Ukur kesehatan berat badan Anda dengan mudah dan cepat.</p>
+        
+        <div class="input-group">
+            <label>Jenis Kelamin</label>
+            <div class="gender-selection">
+                <input type="radio" id="pria" name="gender" value="pria" checked>
+                <label for="pria">Laki-laki</label>
+                <input type="radio" id="wanita" name="gender" value="wanita">
+                <label for="wanita">Perempuan</label>
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label for="weight">Berat Badan (kg)</label>
+            <input type="number" id="weight" placeholder="Contoh: 65">
+        </div>
+        
+        <div class="input-group">
+            <label for="height">Tinggi Badan (cm)</label>
+            <input type="number" id="height" placeholder="Contoh: 170">
+        </div>
+        
+        <button id="calculateBtn">Hitung BMI</button>
+        
+        <div id="result" class="result-box">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
