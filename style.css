@@ -1,0 +1,127 @@
+/* Import font yang lebih modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #B9D5F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="number"], input[type="radio"] + label {
+    width: 100%;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.gender-selection {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gender-selection input[type="radio"] {
+    display: none; /* Sembunyikan radio button asli */
+}
+
+.gender-selection label {
+    flex: 1;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style untuk label radio button yang dipilih */
+.gender-selection input[type="radio"]:checked + label {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    display: none; /* Sembunyi secara default */
+}
+
+/* Kelas untuk status hasil BMI */
+.normal { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.underweight { background-color: #fff3e0; color: #ef6c00; border: 1px solid #ffcc80; }
+.overweight { background-color: #fff3e0; color: #ef6c00; border: 1px solid #ffcc80; }
+.obese { background-color: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+.error { background-color: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
